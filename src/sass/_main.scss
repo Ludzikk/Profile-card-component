@@ -1,0 +1,84 @@
+@use "./colors" as *;
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  margin: 0 1em;
+  max-width: 400px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: white;
+  color: $verydarkdesaturatedblue;
+  z-index: 1;
+
+  &__top {
+    position: relative;
+    height: 140px;
+  }
+
+  &__person {
+    position: absolute;
+    left: 50%;
+    bottom: -43px;
+    border: 5px solid white;
+    border-radius: 50%;
+    transform: translate(-50%);
+  }
+
+  &__bottom {
+    padding-top: 4em;
+    text-align: center;
+  }
+
+  &__info {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+  &__city {
+    padding: 0.5em 0 2em;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2em 0;
+    border-top: 1px solid rgb(194, 193, 193);
+  }
+
+  &__number {
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+
+  &__type {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    color: $darkgray;
+  }
+}
+
+.bg {
+  position: absolute;
+
+  &--top {
+    top: -50%;
+    left: -50%;
+  }
+
+  &--bottom {
+    bottom: -50%;
+    right: -50%;
+  }
+}
+
+.grey {
+  font-weight: normal;
+  color: $darkgray;
+}
